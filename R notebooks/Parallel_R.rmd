@@ -59,7 +59,7 @@ In the code chunk below, we have a list of numbers and a function that calculate
 ```{r parallel_1c, exercise = TRUE}
 
 numbers <- list(1, 2, 3, 4, 5)
-sqrt_parallel <- function(x) {
+cube <- function(x) {
   x^3
 }
 
@@ -67,7 +67,7 @@ sqrt_parallel <- function(x) {
 cl <- makeCluster(detectCores())
 
 # Perform parallel computation using mclapply on the cluster
-result <- mclapply(numbers, sqrt_parallel)
+result <- mclapply(numbers, cube)
 
 # Print the result
 print(result)
@@ -79,7 +79,7 @@ stopCluster(cl)
 
 **Independant Exercise**
 
-In the code chunk below, create a list named my_list containing the numbers 121, 144, 169, 196, and 225. Write a function named cube_root that calculates the cube root of each number in the list. Use mclapply() to apply the function to the list in parallel. Print the result.
+In the code chunk below, create a list named my_list containing the numbers 36, 49, 64, 81, and 100. Write a function named square_root that calculates the square root of each number in the list. Use mclapply() to apply the function to the list in parallel. Print the result.
 
 ```{r parallel_1d, exercise = TRUE, exercise.lines = 8}
 ```
